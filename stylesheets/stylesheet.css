@@ -1,0 +1,121 @@
+body{
+    font-family: "Barlow Semi Condensed", "sans-serif";
+    background-color: hsl(213,44%,95%);
+}
+
+.container {
+    padding-top: 2%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 275px 275px;
+    gap: 20px 20px;
+    grid-template-areas:
+        "card-1 card-1 card-2 card-5"
+        "card-3 card-4 card-4 card-5";
+}
+h1{
+    color: var(--color);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card {
+    position: relative;
+    padding: 10px 30px 30px 30px;
+    border-radius: 10px;
+}
+
+/* .cardbackground { 
+    margin: 3rem; 
+    position: absolute; 
+    top: -50%; 
+    left: 70%; 
+    font-size: 400px;
+    color: yellow; 
+    font-family: "sans-serif";
+}  */
+
+.card-1 {
+    grid-area: card-1;
+    background-color: hsl(263,55%,52%);
+}
+
+.card-2 {
+    grid-area: card-2;
+    background-color: hsl(219,19%,35%);
+}
+
+.card-4 {
+    grid-area: card-4;
+    background-color: hsl(217,30%,14%);
+}
+
+.card-3 {
+    grid-area: card-3;
+    background-color: white;
+}
+
+.card-5 {
+    grid-area: card-5;
+    background-color: white;
+}
+
+.card-header {
+    display: flex;
+}
+
+.card-header-image {
+    position: relative;
+}
+
+.card-header-image img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+img {
+    border-radius: 40px;
+    border:3px solid var(--bordercolor);
+    height: 40px;
+}
+
+.card-header-text {
+    margin-left: 60px;
+}
+
+.card-header-text p {
+    margin: 5px 0px 5px 0px;
+    font-size: 15px;
+}
+
+.card-header-name {
+    color: var(--color);
+    font-weight: 600;
+}
+
+.card-header-verified {
+    color: var(--color);
+    font-weight: 500;
+}
+.card-text {
+    color: var(--color);
+    opacity: 70%;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        grid-template-areas: none;
+    }
+}
